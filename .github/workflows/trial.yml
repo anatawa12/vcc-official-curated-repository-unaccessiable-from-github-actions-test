@@ -1,0 +1,19 @@
+name: Test Access to VCC Repositories
+
+on:
+  workflow_dispatch:
+
+jobs:
+  access-to-github-action:
+    runs-on: ubuntu-latest
+    env:
+      USER_AGENT: vcc-official-curated-repository-unaccessiable-from-github-actions-test (https://github.com/anatawa12/vcc-official-curated-repository-unaccessiable-from-github-actions-test)
+    steps:
+      - name: Try to acccess VRChat Official Repository
+        if: always()
+        run: |
+          curl -vL -H "User-Agent: $USER_AGENT" 'https://packages.vrchat.com/official?download'
+      - name: Try to acccess VRChat Curated Repository
+        if: always()
+        run: |
+          curl -vL -H "User-Agent: $USER_AGENT" 'https://packages.vrchat.com/curated?download'
