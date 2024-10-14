@@ -7,7 +7,7 @@ jobs:
   access-to-github-action:
     runs-on: ubuntu-latest
     env:
-      USER_AGENT: vcc-official-curated-repository-unaccessiable-from-github-actions-test (https://github.com/anatawa12/vcc-official-curated-repository-unaccessiable-from-github-actions-test)
+      USER_AGENT: vrc-get/1.8.1
     steps:
       - name: Try to acccess VRChat Official Repository
         if: always()
