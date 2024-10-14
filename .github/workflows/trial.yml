@@ -7,7 +7,7 @@ jobs:
   access-to-github-action:
     runs-on: ubuntu-latest
     env:
-      USER_AGENT: vrc-get/1.8.1 (https://github.com/vrc-get/vrc-get)
+      USER_AGENT: vrc-get/1.8.1 (+https://github.com/vrc-get/vrc-get)
     steps:
       - name: Try to acccess VRChat Official Repository
         if: always()
